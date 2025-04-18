@@ -7,10 +7,10 @@ StockCalc is a Python-based data pipeline for analyzing stock price data using c
 ## 🚀 Features
 
 - 📥 Import stock data from `.csv` or `.xlsx`
-- 📅 Fills in missing market dates (e.g., weekends, holidays)
+- 📅 Forward fills in missing market dates (e.g., weekends, holidays)
 - 📊 Computes:
-  - Simple Moving Average (SMA)
-  - Exponential Moving Average (EMA)
+  - Simple Moving Average (SMA) with custom period
+  - Exponential Moving Average (EMA) with custom period
   - MACD Line (SMA/EMA)
   - Signal Line (MACD9)
   - MACD Histogram
@@ -31,10 +31,10 @@ project/
 ├── trading_strategy.py         # Trade identification and profit calculation
 ├── data_loader.py              # Data import, validation, export utilities
 ├── tests/                      # Unit & integration test suite
-│   ├── test_data_loader.py
+│   ├── test_loader.py
 │   ├── test_indicators.py
-│   └── test_trading_strategy.py
-├── data/                       # Input stock files (CSV/XLSX)
+│   └── test_trading.py
+├── SP_2016_2021.xlsx           # Example input stock file (CSV/XLSX) Can organise in a folder for future
 ├── outputs/                    # Final results and trade logs
 ├── requirements.txt            # List of requirements
 └── README.md                   # This file
